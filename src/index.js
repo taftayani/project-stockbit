@@ -8,7 +8,6 @@ import axios from 'axios'
 axios.defaults.baseURL =process.env.NEXT_PUBLIC_WEB_URL_API
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
     <Homepage/>
   </React.StrictMode>,
   document.getElementById('root')
