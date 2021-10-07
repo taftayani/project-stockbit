@@ -4,7 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Homepage from './pages/home';
-
+import axios from 'axios'
+axios.defaults.baseURL =process.env.NEXT_PUBLIC_WEB_URL_API
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
