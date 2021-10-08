@@ -13,8 +13,8 @@ axios.defaults.baseURL = process.env.NEXT_PUBLIC_WEB_URL_API;
 const store = createStore(allReducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 ReactDOM.render(
   <Provider store={store}>
-     <React.StrictMode>
-    <Homepage/>
+    <React.StrictMode>
+      <App/>
   </React.StrictMode>
  </Provider>,
   document.getElementById('root')

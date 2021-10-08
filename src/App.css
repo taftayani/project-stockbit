@@ -90,16 +90,19 @@
   display: flex;
   margin-left: auto;
 }
-.navbar-container > ul > li {
+.navbar-container > ul > a > li {
   width: 120px;
   margin-right: 20px;
   text-align: center;
   list-style: none;
   margin-top: 15px;
+  color: #282c34 !important;
+  text-decoration: none;
 }
 /* navbar css  */
 /* modal popup  */
 .modal-popup {
+  top: 0px;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -110,6 +113,21 @@
   margin-right: auto;
   display: block;
   margin-top: 100px;
+}
+.btn-detail {
+  width: 300px;
+  background-color: #eb7222;
+  color: white;
+  border: none;
+  font-weight: bolder;
+  padding: 20px 0px 20px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  outline: none;
+  margin-top: 20px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 /* modal popup  */
 /* loading  */
@@ -132,6 +150,22 @@
   margin-right: auto;
   line-height: 30px;
   letter-spacing: 0.05em;
+}
+/* detail page  */
+.detail-rows {
+  display: flex;
+  max-width: 1440px;
+  padding-left: 50px;
+}
+.col-img-detail {
+  width: 30%;
+}
+.col-info-detail {
+  text-align: left;
+  width: 70%;
+}
+.rows-detal-info {
+  display: flex;
 }
 @keyframes App-logo-spin {
   from {

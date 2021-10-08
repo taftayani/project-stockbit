@@ -2,10 +2,10 @@ import CardMovie from "../components/card"
 import { useState,useEffect } from "react"
 import axiosInstance from "../components/axios"
 import InputSearch from "../components/input"
-import Navbar from "../components/navbar"
 import ModalImage from "../components/modal"
 import { setDetail } from "../reducers/executeAct"
-import { useDispatch,useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
+import { Link} from "react-router-dom"
 const Homepage = () => {
     // state local 
     const [typeInput, setTypeInput] = useState('')
@@ -64,16 +64,15 @@ const Homepage = () => {
     }
     return (
         <div>
-            {console.log('detailmovie',detailMovie)}
         {/* showing popup */}
             {popUp &&
             <ModalImage clickModal={()=>ClosePopup()}>
-                <img className="img-popup-poster" src={showImgPoster.Poster}/>
+                <img className="img-popup-poster" src={showImgPoster.Poster} />
+                <Link to="/detail">
+                    <button className="btn-detail">Lihat Detail</button>
+                </Link>
             </ModalImage>}
         {/* showing popup */}
-        {/* Navbar  */}
-            <Navbar />
-        {/* Navbar  */}
             <div className="section-search">
             <h4 className="label-search">Cari Movie</h4>
             <InputSearch ValueInput={typeInput} onChangeInput={(e) => setTypeInput(e.target.value)} />
