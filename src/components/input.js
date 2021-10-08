@@ -3,7 +3,7 @@ const InputSearch = ({onChangeInput,ValueInput}) => {
             <input className="input-search" type="text"
             value = {ValueInput}
             onChange={onChangeInput}
-            placeholder="please input name of movies" />
+            placeholder="Silakan Cari Film Kesukaan Kamu" />
     )
 }
 export default InputSearch
