@@ -4,15 +4,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Homepage from './pages/home';
-import axios from 'axios'
-axios.defaults.baseURL =process.env.NEXT_PUBLIC_WEB_URL_API
+import axios from 'axios';
+import { createStore } from "redux"
+import allReducer from './reducers';
+import { devToolsEnhancer } from 'redux-devtools-extension';
+import { Provider } from 'react-redux';
+axios.defaults.baseURL = process.env.NEXT_PUBLIC_WEB_URL_API;
+const store = createStore(allReducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
+     <React.StrictMode>
     <Homepage/>
-  </React.StrictMode>,
+  </React.StrictMode>
+ </Provider>,
   document.getElementById('root')
 );
-
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

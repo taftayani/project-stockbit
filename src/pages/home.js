@@ -4,6 +4,8 @@ import axiosInstance from "../components/axios"
 import InputSearch from "../components/input"
 import Navbar from "../components/navbar"
 import ModalImage from "../components/modal"
+import { setDetail } from "../reducers/executeAct"
+import { useDispatch,useSelector } from "react-redux"
 const Homepage = () => {
     // state local 
     const [typeInput, setTypeInput] = useState('')
@@ -33,10 +35,13 @@ const Homepage = () => {
         }
         },[typeInput])
     // onchange input search 
+    // dispatch and selector movie
+    const dispatch = useDispatch()
+    const detailMovie = useSelector((state)=>state.detailmovie)
     // showing list movie 
     const ShowListMovie = listMovie.map((movie, index) => {
         return (
-            <div onClick={()=>PopupClick(movie.Poster)} className="column-poster">
+            <div onClick={()=>PopupClick(movie)} className="column-poster">
                   <div key={index}>
                     <CardMovie TitlePoster={movie.Title}
                     YearPoster={movie.Year}
@@ -50,14 +55,20 @@ const Homepage = () => {
     const PopupClick = (movieClick) => {
         setPopup(true)
         setShowImgPoster(movieClick)
+        dispatch(setDetail(movieClick))
+        document.body.style.overflow = "hidden"
+    }
+    const ClosePopup = (movieClick) => {
+        setPopup(false)
+        document.body.style.overflow = "scroll"
     }
     return (
         <div>
-            {console.log(popUp)}
+            {console.log('detailmovie',detailMovie)}
         {/* showing popup */}
             {popUp &&
-                <ModalImage clickModal={()=>setPopup(false)}>
-                <h1>TES</h1>
+            <ModalImage clickModal={()=>ClosePopup()}>
+                <img className="img-popup-poster" src={showImgPoster.Poster}/>
             </ModalImage>}
         {/* showing popup */}
         {/* Navbar  */}

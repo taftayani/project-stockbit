@@ -67,6 +67,7 @@
   margin-bottom: 20px;
   margin-top: 20px;
   padding: 20px;
+  cursor: pointer;
 }
 .header-title {
   width: 100%;
@@ -103,6 +104,12 @@
   width: 100%;
   height: 100%;
   background-color: #9c9c9c8a;
+}
+.img-popup-poster {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 100px;
 }
 /* modal popup  */
 /* loading  */
