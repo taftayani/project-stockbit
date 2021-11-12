@@ -1,10 +1,14 @@
 {
     "env": {
         "browser": true,
-        "commonjs": true,
         "es2021": true
     },
-    "extends": ["eslint:recommended", "plugin:react/recommended"
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
+        "react-app",
+        "prettier"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -14,14 +18,24 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "prettier"
     ],
     "rules": {
-        "no-unused-vars":"warn",
-        "react/react-in-jsx-scope": "off",
-    },
-    "globals": {
-        "React": "writable"
-      }
-
+        "prettier/prettier":[
+            "warn",
+            {
+                "bracketSpacing": true,
+                "jsxBracketSameLine": false,
+                "singleQuote": true,
+                "trailingComma": "all",
+                "semi": true,
+                "tabWidth": 2,
+                            
+            }
+        ],
+        "semi":"error",
+        "no-unused-vars":"off",
+        "react/react-in-jsx-scope":"off"
+    }
 }

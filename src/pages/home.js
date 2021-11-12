@@ -11,7 +11,7 @@ const Homepage = () => {
   const [typeInput, setTypeInput] = useState("");
   const [listMovie, setListMovie] = useState([]);
   const [popUp, setPopup] = useState(false);
-  const [showImgPoster, setShowImgPoster] = useState("");  
+  const [showImgPoster, setShowImgPoster] = useState("");
   // state local
   // onchange input search
   const setInput = async (search) => {
