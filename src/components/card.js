@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react"
 
 const CardMovie = ({imgUrl,TitlePoster,YearPoster}) => {
@@ -6,6 +7,7 @@ const CardMovie = ({imgUrl,TitlePoster,YearPoster}) => {
     })
     return (
         <div>
+            
             <div className="card-movie">
                 <img className="img-poster" src={imgUrl}/>
                 <h1 className="header-title">{TitlePoster}</h1>

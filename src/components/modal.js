@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react"
 
 const ModalImage = ({ clickModal, children,statusPopup }) => {
@@ -5,6 +6,7 @@ const ModalImage = ({ clickModal, children,statusPopup }) => {
     return (
         <div onClick={clickModal} className="modal-popup">
             {children}
+            
         </div>
     )
 }

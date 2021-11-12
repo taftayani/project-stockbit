@@ -1,4 +1,6 @@
-const InputSearch = ({onChangeInput,ValueInput}) => {
+/* eslint-disable react/prop-types */
+const InputSearch = ({ onChangeInput, ValueInput }) =>
+{
     return (
             <input className="input-search" type="text"
             value = {ValueInput}
