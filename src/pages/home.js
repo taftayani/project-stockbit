@@ -8,11 +8,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 const Homepage = () => {
   // state local
-  const [typeInput, setTypeInput] = useState("");
+  const [typeInput, setTypeInput] = useState("all");
   const [listMovie, setListMovie] = useState([]);
   const [popUp, setPopup] = useState(false);
+
   const [showImgPoster, setShowImgPoster] = useState("");
   // state local
+
   // onchange input search
   const setInput = async (search) => {
     try {

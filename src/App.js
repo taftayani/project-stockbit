@@ -6,7 +6,7 @@ import Navbar from "./components/navbar";
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App p-4">
         <Navbar />
         <Switch>
           <Route path="/" exact component={Homepage} />
