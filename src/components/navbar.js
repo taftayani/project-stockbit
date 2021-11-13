@@ -7,13 +7,13 @@ const Navbar = () => {
       </Link>
       <ul>
         <Link to="/">
-          <li>Beranda</li>
+          <li>Home</li>
         </Link>
         <Link>
-          <li>Histori Movie</li>
+          <li>Details</li>
         </Link>
         <Link>
-          <li>login</li>
+          <li>Watchlist</li>
         </Link>
       </ul>
     </div>

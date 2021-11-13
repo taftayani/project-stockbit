@@ -80,8 +80,10 @@ const Homepage = () => {
         </ModalImage>
       )}
       {/* showing popup */}
-      <div className="section-search">
-        <h4 className="label-search">Cari Movie</h4>
+      <div className="flex my-10">
+        <h4 className="label-search mt-4 text-yellow-secondary">
+          Search Movies
+        </h4>
         <InputSearch
           ValueInput={typeInput}
           onChangeInput={(e) => setTypeInput(e.target.value)}
