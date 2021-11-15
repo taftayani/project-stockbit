@@ -8,6 +8,26 @@ module.exports = {
           primary: "#CFAA01",
           secondary: "#7B6B0C",
         },
+        grey: {
+          primary: "#D2CACA",
+          secondary: "#CCCBC4",
+        },
+      },
+      fontSize: {
+        "12px": "12px",
+        "14px": "14px",
+        "30px": "30px",
+        "20px": "20px",
+      },
+      padding: {
+        "30px": "30px",
+        "50px": "50px",
+      },
+      spacing: {
+        "30px": "30px",
+        "7px": "7px",
+        "300px": "300px",
+        "350px": "350px",
       },
     },
   },
